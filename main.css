@@ -1,0 +1,127 @@
+body {
+    display: grid;
+    grid-template: 1fr 4fr / 1.2fr 7fr;
+    height: 100vh;
+    grid-template-areas:
+        "dashboard header"
+        "dashboard main";
+}
+
+
+.dashboard {
+    grid-area: dashboard;
+    display: grid;
+    justify-items: center;
+    grid-template: 1fr / 1fr repeat(2fr, 10);
+    background: rgb(45, 130, 255);
+    background: linear-gradient(130deg, rgba(45, 130, 255, 1) 0%, rgba(0, 212, 255, 1) 100%);
+}
+
+.dashboard h2 {
+    display: flex;
+    align-items: center;
+    margin: 25px auto;
+}
+
+.dashboard li {
+    display: flex;
+    align-items: center;
+    margin: 25px auto;
+}
+
+.dashboard img {
+    margin-right: 10px;
+}
+
+.search {
+    display: grid;
+    align-items: center;
+    grid-template-columns: .5fr 2fr 1fr;
+}
+
+.search img {
+    justify-self: center;
+    margin-top: -7vh;
+}
+
+.search input {
+    margin-top: -7vh;
+    margin-left: -2vw;
+    font-size: 14px;
+    border-radius: 15px;
+    background-color: #dcdcdc;
+    border: none;
+    padding: .5rem;
+}
+
+.header {
+    grid-area: header;
+    background-color: rgb(247, 247, 247);
+    display: grid;
+    grid-template: 2fr 1fr / 2fr 1fr;
+}
+
+.headerTools {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.headerTools input {
+    background-color: dodgerblue;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: none;
+    margin-right: 30px;
+    color: white;
+}
+
+.headerUtilities {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.main {
+    grid-area: main;
+    gap: 20px;
+    background-color: #dcdcdc;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.projects {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .2fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "proHeader proHeader";
+}
+
+.proHeader {
+    grid-area: proHeader;
+}
+
+.notis {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.proCard {
+    display: grid;
+    height: 200px;
+    width: 400px;
+    padding: 5px;
+    margin-left: 20px;
+    background-color: rgb(247, 247, 247);
+    border-radius: 5px;
+    border-left: 7px solid orange;
+}
+
+.proActions {
+    display: grid;
+    gap: 10px;
+    margin-right: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-self: end;
+}
